@@ -30,11 +30,8 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build and push Docker image
-      env:
-        DOCKER_USERNAME: roygan1360
-        DOCKER_PASSWORD: Weijian1360@
       run: |
         docker build -t royimage/gittest:latest .
         docker images
-        echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+        echo "Weijian1360@" | docker login -u roygan1360 --password-stdin
         docker push royimage/gittest:latest
