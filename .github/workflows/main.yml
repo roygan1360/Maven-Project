@@ -34,4 +34,4 @@ jobs:
         docker build -t royimages/gittest:latest .
         docker images
         echo "Weijian1360@" | docker login -u roygan1360 --password-stdin
-        docker push royimages roygan1360/intel
+        docker push roygan1360/intel
