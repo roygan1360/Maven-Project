@@ -31,7 +31,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t royimages:v2/gittest:latest .
+        docker build -t royimages/gittest:latest .
         docker images
         echo "Weijian1360@" | docker login -u roygan1360 --password-stdin
-        docker push royimages:v2 roygan1360/intel
+        docker push royimages roygan1360/intel
